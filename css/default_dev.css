@@ -23,14 +23,14 @@ body {
 }
 
 #fallClock {
-	text-align: center;
+	text-align: right;
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
 #togeClock {
-	text-align: center;
+	text-align: right;
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
