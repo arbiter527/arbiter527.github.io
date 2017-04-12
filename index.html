@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* For kawaii juju baobao.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Zuowei"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Juju"</span>);<br />
+				<span class="comments">// May 2, 2010, I told you I love you. </span><br />
+				i.love(u);<br />
+				<span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
+				u.accepted();<br />
+				<span class="comments">// I miss u every day.</span><br />
+				i.miss(u);<br />
+				<span class="comments">// And take care of u and our love.</span><br />
+				i.takeCareOf(u);<br />
+				<span class="keyword">boolean</span> areWeTogether = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (areWeTogether) {<br />
+				<span class="placeholder"/><span class="comments">// Big ring, big house, a lot of clothes! Bags & shoes, more more more! </span><br />				
+				<span class="placeholder"/>i.buyALotFor(u);<br />
+				<span class="placeholder"/><span class="comments">// Japan Spain & Swit, go go go! </span><br />					
+				<span class="placeholder"/>i.goRoundWorldWith(u);<br />
+				<span class="placeholder"/><span class="comments">// Let's start up up up! </span><br />				
+				<span class="placeholder"/>i.chaseDreamWith(u);<br />
+				<span class="placeholder"/>areWeTogether = u.liveHappilyWith(i);<br />
+				}<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						, I have fallen in love with you for
+						<div id="fallClock"></div>
+						& we have been together for
+						<div id="togeClock"></div>
+					</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var fallinlove = new Date();
+		fallinlove.setFullYear(2004, 8, 1);
+		fallinlove.setHours(7);
+		fallinlove.setMinutes(0);
+		fallinlove.setSeconds(0);
+		fallinlove.setMilliseconds(0);
+		var together = new Date();
+		together.setFullYear(2010, 4, 2);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);				
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(fallinlove, together);
+			setInterval(function () {
+				timeElapse(fallinlove, together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
