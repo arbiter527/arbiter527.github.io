@@ -22,7 +22,14 @@ body {
 	height: 100%;
 }
 
-#elapseClock {
+#fallClock {
+	text-align: right;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#togeClock {
 	text-align: right;
 	font-size: 18px;
 	margin-top: 10px;
