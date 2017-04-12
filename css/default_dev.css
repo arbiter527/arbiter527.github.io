@@ -47,7 +47,12 @@ body {
 	display: none;
 }
 
-#elapseClock .digit{
+#fallClock .digit{
+	font-family: "digit";
+	font-size: 36px;
+}
+
+#togeClock .digit{
 	font-family: "digit";
 	font-size: 36px;
 }
@@ -59,12 +64,6 @@ body {
 	margin-right: 120px;
 	text-align: right;
 	display: none;
-}
-
-#loveu .signature{
-	margin-top: 10px;
-	font-size: 20px;
-	font-style: italic;
 }
 
 #clickSound{
@@ -101,13 +100,6 @@ body {
 	color: #3f7f5f;
 }
 
-#copyright{
-	margin-top: 10px;
-	text-align: center;
-	width:100%;
-	color:#666;
-}
-
 #errorMsg{
 	width: 100%;
 	text-align: center;
@@ -115,8 +107,4 @@ body {
 	position: absolute;
 	top: 100px;
 	left:0px;
-}
-
-#copyright a{
-	color:#666;
 }
